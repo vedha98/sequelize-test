@@ -5,7 +5,7 @@ app.get("/",(req,res)=>{
     res.json({msg:"success"});
 })
 
-
+app.use(bodyparser.json());
 const db = require('./config/database');
 db.authenticate().then(console.log("true")).catch(err=>{console.log(err)});
 app.use('/user',require('./routes/users'))
