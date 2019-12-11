@@ -17,11 +17,11 @@ user.create({name,desc,salary}).then( res.json({msg:"success"})   );
 router.post('/',(req,res)=>{
 let {id,salary} = req.body;
 
-user.update({salary},{where:{id:id}}).then(res.json({msg:"success"}))
+user.update({salary},{where:{id}}).then(res.json({msg:"success"}))
 
 })
 router.delete('/',(req,res)=>{
     let{id}=req.body;
-    user.destroy({where:{id:id}}).then(res.json({msg:'deleted successfully'}))
+    user.destroy({where:{id}}).then(res.json({msg:'deleted successfully'}))
 })
 module.exports = router
