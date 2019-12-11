@@ -14,4 +14,10 @@ router.put('/',(req,res)=>{
 let {name,desc,salary} = req.body;
 user.create({name,desc,salary}).then( res.json({msg:"success"})   );
 })
+router.post('/',(req,res)=>{
+let {id,salary} = req.body;
+
+user.update({salary},{where:{id:id}}).then(res.json({msg:"success"}))
+
+})
 module.exports = router
