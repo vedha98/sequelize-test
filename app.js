@@ -11,5 +11,5 @@ db.authenticate().then(console.log("true")).catch(err=>{console.log(err)});
 app.use('/user',require('./routes/users'))
 
 
-const PORT = process.env.PORT||5000;
+const PORT = process.env.PORT||8000;
 app.listen(PORT,console.log(`Server is running at ${PORT}`));

@@ -1,15 +1,15 @@
 const Sequelize = require('sequelize');
 const db = require("../config/database");
-const user = db.define('data',
+const projects = db.define('projects',
 {
-    
-name:{
-    type:Sequelize.STRING
+   
+userid:{
+    type:Sequelize.INTEGER
 },
 desc:{
     type:Sequelize.STRING
 },
-salary:{
+title:{
     type:Sequelize.STRING
 },
 createdAt:{
@@ -20,4 +20,4 @@ updatedAt:{
 }
 }
 )
-module.exports = user;
+module.exports = projects;
